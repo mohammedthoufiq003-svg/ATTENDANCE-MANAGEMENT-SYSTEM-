@@ -1,0 +1,2 @@
+Attendance Management System – Description
+The Attendance Management System is a web-based application designed to automate and simplify the process of recording, managing, and monitoring student attendance in educational institutions. The system helps teachers efficiently mark attendance, track student presence, generate reports, and maintain accurate attendance records without relying on manual paperwork.
