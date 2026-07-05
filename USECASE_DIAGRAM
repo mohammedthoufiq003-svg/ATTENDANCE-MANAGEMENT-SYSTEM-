@@ -1,0 +1,37 @@
++--------------------------------------------------+
+                    |         Attendance Management System             |
+                    +--------------------------------------------------+
+
+        Admin
+          |
+          |-----------------------> Login
+          |-----------------------> Manage Students
+          |-----------------------> Manage Faculty
+          |-----------------------> Manage Subjects
+          |-----------------------> View Attendance Reports
+          |-----------------------> Manage User Accounts
+          |
+          |
+      Faculty
+          |
+          |-----------------------> Login
+          |-----------------------> Mark Attendance
+          |-----------------------> Update Attendance
+          |-----------------------> View Student Attendance
+          |-----------------------> Generate Attendance Reports
+          |
+          |
+      Student
+          |
+          |-----------------------> Login
+          |-----------------------> View Attendance
+          |-----------------------> View Attendance Percentage
+          |-----------------------> Download Attendance Report
+          |
+          |
+      System
+          |
+          |-----------------------> Calculate Attendance Percentage
+          |-----------------------> Store Attendance Records
+          |-----------------------> Generate Reports
+          |-----------------------> Send Attendance Notifications
