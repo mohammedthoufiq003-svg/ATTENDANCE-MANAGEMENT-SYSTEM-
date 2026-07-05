@@ -1,0 +1,43 @@
++----------------------+
+                    |       STUDENT        |
+                    +----------------------+
+                    | Student_ID (PK)      |
+                    | Name                 |
+                    | Gender               |
+                    | DOB                  |
+                    | Department           |
+                    | Year                 |
+                    | Section              |
+                    | Email                |
+                    | Phone                |
+                    +----------------------+
+                              |
+                              | 1
+                              |
+                              | M
+                    +----------------------+
+                    |      ATTENDANCE      |
+                    +----------------------+
+                    | Attendance_ID (PK)   |
+                    | Student_ID (FK)      |
+                    | Subject_ID (FK)      |
+                    | Faculty_ID (FK)      |
+                    | Date                 |
+                    | Status               |
+                    | Time                 |
+                    +----------------------+
+                       /                \
+                      /                  \
+                     M                    M
+                    /                      \
+                   1                        1
+
+      +----------------------+    +----------------------+
+      |       SUBJECT        |    |       FACULTY       |
+      +----------------------+    +----------------------+
+      | Subject_ID (PK)       |    | Faculty_ID (PK)      |
+      | Subject_Name          |    | Faculty_Name         |
+      | Subject_Code          |    | Department           |
+      | Semester              |    | Email                |
+      +----------------------+    | Phone                |
+                                  +----------------------+
