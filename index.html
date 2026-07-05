@@ -1,104 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Attendance Register</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="book">
+<header>
+    <h1>Attendance Management System</h1>
+    <p>Welcome to the Smart Attendance Management System</p>
+</header>
 
-    <!-- Cover / header -->
-    <header class="cover">
-      <p class="cover-label">Roll No. 1 &mdash; Section A</p>
-      <h1 class="cover-title">Attendance Register</h1>
-      <p class="cover-sub">A ledger for who showed up, and when.</p>
-    </header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="studentregistration.html">Students</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="report.html">Reports</a>
+</nav>
 
-    <!-- Tabs -->
-    <nav class="tabs" role="tablist">
-      <button class="tab is-active" data-tab="today" role="tab" aria-selected="true">Today's Roll Call</button>
-      <button class="tab" data-tab="roster" role="tab" aria-selected="false">Roster</button>
-      <button class="tab" data-tab="history" role="tab" aria-selected="false">History</button>
-    </nav>
+<div class="container">
 
-    <!-- TODAY'S ROLL CALL -->
-    <section class="page is-active" id="page-today">
+    <div class="card">
+        <h2>Project Overview</h2>
+        <p>
+            The Attendance Management System is a web-based application
+            designed to manage student attendance efficiently. It helps
+            faculty record attendance, generate reports, and monitor
+            student attendance percentages accurately.
+        </p>
+    </div>
 
-      <div class="page-toolbar">
-        <label class="date-field">
-          <span>Date</span>
-          <input type="date" id="attendanceDate">
-        </label>
-        <div class="toolbar-stats" id="todaySummary"></div>
-      </div>
+    <div class="card">
+        <h2>Project Features</h2>
+        <ul>
+            <li>Student Registration</li>
+            <li>Faculty Registration</li>
+            <li>Subject Management</li>
+            <li>Attendance Marking</li>
+            <li>Attendance History</li>
+            <li>Attendance Reports</li>
+            <li>Attendance Percentage</li>
+            <li>Profile Management</li>
+        </ul>
+    </div>
 
-      <div class="ledger" id="rollCallList">
-        <!-- rows injected by script.js -->
-      </div>
+    <div class="card">
+        <h2>Quick Access</h2>
+        <p>
+            Click the button below to access the login page.
+        </p>
 
-      <p class="empty-note" id="rollCallEmpty" hidden>
-        No students on the roster yet. Add someone under the <strong>Roster</strong> tab.
-      </p>
-    </section>
+        <a href="login.html">
+            <button>Go to Login</button>
+        </a>
+    </div>
 
-    <!-- ROSTER -->
-    <section class="page" id="page-roster">
+</div>
 
-      <form class="add-form" id="addStudentForm">
-        <label class="field">
-          <span>Roll number</span>
-          <input type="text" id="newRoll" placeholder="e.g. 21" required>
-        </label>
-        <label class="field field-grow">
-          <span>Full name</span>
-          <input type="text" id="newName" placeholder="e.g. Ananya Raghavan" required>
-        </label>
-        <button type="submit" class="btn btn-ink">Add student</button>
-      </form>
+<footer>
+    <p>© 2026 Attendance Management System | Developed by Mohammed Thoufiq</p>
+</footer>
 
-      <div class="ledger" id="rosterList">
-        <!-- rows injected by script.js -->
-      </div>
-
-      <p class="empty-note" id="rosterEmpty" hidden>
-        The roster is empty. Add your first student above.
-      </p>
-    </section>
-
-    <!-- HISTORY -->
-    <section class="page" id="page-history">
-
-      <div class="page-toolbar">
-        <label class="date-field">
-          <span>Jump to date</span>
-          <input type="date" id="historyDate">
-        </label>
-      </div>
-
-      <div class="ledger" id="historyList">
-        <!-- rows injected by script.js -->
-      </div>
-
-      <p class="empty-note" id="historyEmpty" hidden>
-        No attendance recorded for this date yet.
-      </p>
-
-      <h2 class="section-heading">Overall attendance %</h2>
-      <div class="ledger" id="percentList">
-        <!-- rows injected by script.js -->
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="stamp-layer" id="stampLayer" aria-hidden="true"></div>
-
-<script src="script.js"></script>
 </body>
 </html>
