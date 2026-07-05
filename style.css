@@ -1,0 +1,381 @@
+/* ---------------------------------------------------
+   Tokens
+--------------------------------------------------- */
+:root {
+  --ink:        #1E2A38;
+  --ink-soft:   #445366;
+  --paper:      #EAE6D9;
+  --paper-line: #D9D4C2;
+  --present:    #3E7C59;
+  --present-bg: #E4EEE6;
+  --absent:     #A63D40;
+  --absent-bg:  #F3E4E1;
+  --muted:      #7A7563;
+
+  --font-display: 'Fraunces', serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ink);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.04), transparent 40%);
+  font-family: var(--font-body);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 80px;
+}
+
+/* ---------------------------------------------------
+   Book shell
+--------------------------------------------------- */
+.book {
+  width: 100%;
+  max-width: 760px;
+  background: var(--paper);
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.cover {
+  padding: 36px 40px 28px;
+  border-bottom: 2px solid var(--ink);
+  background: linear-gradient(180deg, rgba(0,0,0,0.03), transparent);
+}
+
+.cover-label {
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cover-title {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -0.01em;
+}
+
+.cover-sub {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+/* ---------------------------------------------------
+   Tabs
+--------------------------------------------------- */
+.tabs {
+  display: flex;
+  background: #DFDACB;
+  border-bottom: 1px solid var(--paper-line);
+}
+
+.tab {
+  flex: 1;
+  padding: 14px 10px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab:hover { color: var(--ink); }
+
+.tab.is-active {
+  color: var(--ink);
+  border-bottom-color: var(--present);
+  background: var(--paper);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------
+   Pages
+--------------------------------------------------- */
+.page {
+  display: none;
+  padding: 28px 40px 40px;
+}
+
+.page.is-active { display: block; }
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 32px 0 12px;
+}
+
+.page-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.date-field, .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.field-grow { flex: 1; }
+
+input[type="date"],
+input[type="text"] {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 9px 10px;
+  border: 1px solid var(--paper-line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+input[type="date"]:focus,
+input[type="text"]:focus {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+}
+
+.toolbar-stats {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------
+   Add-student form
+--------------------------------------------------- */
+.add-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-ink { background: var(--ink); color: var(--paper); }
+.btn-ink:hover { opacity: 0.88; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--paper-line);
+  color: var(--ink-soft);
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+/* ---------------------------------------------------
+   Ledger rows
+--------------------------------------------------- */
+.ledger { border-top: 1px solid var(--paper-line); }
+
+.ledger-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--paper-line);
+}
+
+.roll {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  width: 34px;
+  flex-shrink: 0;
+}
+
+.name {
+  flex: 1;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.percent {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  width: 52px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.percent-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: var(--paper-line);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0 12px;
+}
+
+.percent-bar {
+  height: 100%;
+  background: var(--present);
+}
+
+/* Mark buttons */
+.mark-group {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.mark-btn {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 3px;
+  border: 1px solid var(--paper-line);
+  background: #fff;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.mark-btn:hover { border-color: var(--ink); }
+
+.mark-btn.present.is-selected {
+  background: var(--present-bg);
+  border-color: var(--present);
+  color: var(--present);
+}
+
+.mark-btn.absent.is-selected {
+  background: var(--absent-bg);
+  border-color: var(--absent);
+  color: var(--absent);
+}
+
+/* status pill used in history view */
+.status-pill {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+.status-pill.present { background: var(--present-bg); color: var(--present); }
+.status-pill.absent  { background: var(--absent-bg);  color: var(--absent); }
+
+.remove-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--absent);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.remove-btn:hover { text-decoration: underline; }
+
+.empty-note {
+  margin-top: 24px;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  border: 1px dashed var(--paper-line);
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------
+   Stamp animation (signature moment)
+--------------------------------------------------- */
+.stamp-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.stamp-mark {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 3px solid currentColor;
+  border-radius: 4px;
+  transform: rotate(-8deg) scale(1.8);
+  opacity: 0;
+  animation: stampDown 0.45s ease-out forwards;
+}
+
+.stamp-mark.present { color: var(--present); }
+.stamp-mark.absent { color: var(--absent); }
+
+@keyframes stampDown {
+  0%   { opacity: 0; transform: rotate(-8deg) scale(2.4); }
+  35%  { opacity: 0.9; transform: rotate(-8deg) scale(1); }
+  75%  { opacity: 0.9; transform: rotate(-8deg) scale(1); }
+  100% { opacity: 0; transform: rotate(-8deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-mark { animation: none; opacity: 0; }
+}
+
+/* ---------------------------------------------------
+   Responsive
+--------------------------------------------------- */
+@media (max-width: 560px) {
+  .page { padding: 22px 20px 32px; }
+  .cover { padding: 28px 20px 22px; }
+  .cover-title { font-size: 30px; }
+  .add-form { flex-direction: column; align-items: stretch; }
+  .ledger-row { flex-wrap: wrap; }
+  .percent-bar-wrap { display: none; }
+}
