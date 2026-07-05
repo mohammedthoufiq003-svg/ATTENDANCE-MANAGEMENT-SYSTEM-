@@ -1,0 +1,149 @@
+Attendance Management System
+
+Project Overview
+
+The Attendance Management System is a web-based application developed to simplify and automate the attendance process in educational institutions. It enables administrators and faculty members to manage student records, record attendance, and generate attendance reports efficiently. The system reduces manual errors, saves time, and provides accurate attendance statistics.
+
+Project Objectives
+
+Automate student attendance management.
+
+Reduce paperwork and manual calculations.
+
+Maintain accurate attendance records.
+
+Generate attendance reports and percentage.
+
+Improve efficiency in educational institutions.
+
+
+Features
+
+Admin Login
+
+Student Registration
+
+Faculty Management
+
+Subject Management
+
+Mark Daily Attendance
+
+View Attendance Records
+
+Attendance Percentage Calculation
+
+Generate Attendance Reports
+
+Search Student Records
+
+Secure Data Storage
+
+
+Technology Used
+
+Frontend
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Bootstrap
+
+
+Backend
+
+Python (Flask)
+
+
+Database
+
+MySQL
+
+
+Development Tools
+
+Visual Studio Code
+
+Git
+
+GitHub
+
+XAMPP (or MySQL Server)
+
+
+Software Requirements
+
+Windows 10/11
+
+Python 3.x
+
+Flask
+
+MySQL
+
+VS Code
+
+Git
+
+
+Hardware Requirements
+
+Intel Core i3 or above
+
+4 GB RAM (Minimum)
+
+500 MB Free Disk Space
+
+Internet Connection
+
+
+Modules
+
+1. Admin Module
+
+
+2. Student Module
+
+
+3. Faculty Module
+
+
+4. Attendance Module
+
+
+5. Report Module
+
+
+
+Database Tables
+
+Admin
+
+Student
+
+Faculty
+
+Subject
+
+Attendance
+
+
+Future Enhancements
+
+Face Recognition Attendance
+
+QR Code Attendance
+
+Mobile Application
+
+SMS/Email Notifications
+
+Cloud Database Integration
+
+
+Conclusion
+
+The Attendance Management System provides an efficient, reliable, and user-friendly solution for managing attendance. It minimizes manual work, improves accuracy, and enables institutions to maintain digital attendance records effectively.
